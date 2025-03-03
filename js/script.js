@@ -707,4 +707,136 @@
 //     }
 //   }
 //   return values;
+// function betterThanAverage(classPoints, yourPoints) {
+//   let total = 0;
+//   for (const point of classPoints) {
+//     total = ((total += point) + yourPoints) / classPoints.length + yourPoints.length;
+//   }
+//   console.log(total);
+// }
+// function betterThanAverage(classPoints, yourPoints) {
+//   const average = classPoints.reduce((sum, point) => sum + point, 0) / classPoints.length;
+//   return yourPoints > average;
+// }
+// function betterThanAverage(classPoints, yourPoints) {
+//   let total = yourPoints;
+
+//   for (const point of classPoints) {
+//     total += point;
+//   }
+
+//   const average = total / (classPoints.length + 1);
+
+//   return yourPoints > average;
+// !dddddddddddddddddddddddddddddddddddddddddddd
+//   return (
+//     yourPoints >
+//     classPoints.reduce((a, b) => {
+//       return (a + b) / (classPoints.length + 1);
+//     })
+//   );
+// }
+// console.log(betterThanAverage([14, 28, 18, 22], 22));
+// ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+// function bmi(weight, height) {
+//   let coefficient = weight / Math.pow(height, 2);
+//   if (coefficient <= 18.5) {
+//     return 'Underweight';
+//   } else if (coefficient <= 25.0) {
+//     return 'Normal';
+//   } else if (coefficient <= 30.0) {
+//     return 'Overweight';
+//   } else {
+//     return 'Obese';
+//   }
+// }
+// console.log(bmi(70, 1.7));
+// ..............................................................
+// function stringToArray(string) {
+//   return string.split(' ');
+// }
+
+// console.log(stringToArray('I love arrays they are my favorite'));
+// ..............................................................
+// const quarterOf = month => {
+//   if (month <= 3) {
+//     return 'Квартал 1';
+//   } else if (month <= 6) {
+//     return 'Квартал 2';
+//   } else if (month <= 9) {
+//     return 'Квартал 3';
+//   } else if (month <= 12) {
+//     return 'Квартал 4';
+//   } else {
+//     return `${month} is not valid`;
+//   }
+// };
+// console.log(quarterOf(2));
+// console.log(quarterOf(3));
+// console.log(quarterOf(5));
+// console.log(quarterOf(7));
+// console.log(quarterOf(9));
+// console.log(quarterOf(11));
+// console.log(quarterOf(12));
+// console.log(quarterOf(19));
+// console.log(quarterOf(15));
+// !...............................................................
+// const changeDirection = string => {
+//   let reversed = '';
+//   for (let i = string.length - 1; i >= 0; i--) {
+//     reversed += string[i];
+//   }
+//   return reversed;
+// };
+// !.................................................................
+// const changeDirection = string => {
+//   return string.split('').reverse().join('');
+// };
+// console.log(changeDirection('world'));
+// console.log(changeDirection('word'));
+// console.log(changeDirection('Deep Purple'));
+// !....................................................................
+// function removeChar(str) {
+//   return str.slice(1, -1);
+// }
+// console.log(removeChar('world'));
+// console.log(removeChar('word'));
+// console.log(removeChar('Deep Purple'));
+// !............................................................
+// const changeNumbers = stringNum => {
+//   let newStringNum = '';
+
+//   for (let i = 0; i < stringNum.length; i++) {
+//     newStringNum += stringNum[i] < '5' ? '0' : '1';
+//   }
+
+//   return newStringNum;
+// };
+// const changeNumbers = stringNum => {
+//   let newStringNum = stringNum
+//     .split('')
+//     .map(el => (el < '5' ? '0' : '1'))
+//     .join('');
+//   return newStringNum;
+// };
+
+// console.log(changeNumbers('3521101834'));
+// console.log(_.sum([4, 2, 8, 6]));
+// const books = [
+//   {
+//     title: 'The Last Kingdom',
+//     author: 'Bernard Cornwell',
+//     rating: 8.38,
+//   },
+//   {
+//     title: 'Beside Still Waters',
+//     author: 'Robert Sheckley',
+//     rating: 8.51,
+//   },
+// ];
+
+// for (const book of books) {
+//   console.log(book.title);
+//   console.log(book.author);
+//   console.log(book.rating);
 // }

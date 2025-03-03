@@ -393,15 +393,41 @@ const array1 = ['hello', 'deep', 'mortal', 'scorpion'];
 // const sortedScores = scores.toSorted((a, b) => b - a);
 // console.log(sortedScores);
 
-const students = [
-  { name: 'Mango', score: 83 },
-  { name: 'Poly', score: 59 },
-  { name: 'Ajax', score: 37 },
-  { name: 'Kiwi', score: 94 },
-];
+// const students = [
+//   { name: 'Mango', score: 83 },
+//   { name: 'Poly', score: 59 },
+//   { name: 'Ajax', score: 37 },
+//   { name: 'Kiwi', score: 94 },
+// ];
 
-const sortScoreDown = students.toSorted((a, b) => a.score - b.score);
-const sortScoreUp = students.toSorted((a, b) => b.score - a.score);
-const sortName = students.toSorted((a, b) => b.name.localeCompare(a.name));
+// const sortScoreDown = students.toSorted((a, b) => a.score - b.score);
+// const sortScoreUp = students.toSorted((a, b) => b.score - a.score);
+// const sortName = students.toSorted((a, b) => b.name.localeCompare(a.name));
 
-console.log(sortName);
+// console.log(sortName);
+
+// class User {
+//   constructor(name, email) {
+//     this.name = name;
+//     this.email = email;
+//   }
+// }
+
+// const newUser = new User('Ueban', 'ueban@mail.com');
+// console.log(newUser);
+
+// const newUser1 = new User('Kozel', 'dolbo_kretin@mail.com');
+// console.log(newUser1);
+
+class Car {
+  constructor(params) {
+    this.brand = params.brand;
+    this.model = params.model;
+  }
+}
+const dewoo = new Car({
+  brand: 'Mango',
+  model: 'mango@mail.com',
+});
+
+console.log(dewoo);

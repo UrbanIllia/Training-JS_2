@@ -840,3 +840,255 @@
 //   console.log(book.author);
 //   console.log(book.rating);
 // }
+// function updateLight(current) {
+//   //   if (current === 'green') {
+//   //     return 'yellow';
+//   //   } else if (current === 'yellow') {
+//   //     return 'red';
+//   //   } else {
+//   //     return 'green';
+//   //   }
+//   return current === 'green' ? 'yellow' : current === 'yellow' ? 'red' : 'green';
+//   //  return current === 'yellow' ? 'red' : current === 'green' ? 'yellow' : 'green';
+// }
+// console.log(updateLight('green'));
+// console.log(updateLight('yellow'));
+// console.log(updateLight('red'));
+// const solution = (str, ending) => {
+//   return str.endsWith(ending);
+// };
+// console.log(solution('abc', 'bc'));
+// console.log(solution('abc', 'd'));
+// ...................................................................................................
+// Создайте программу, которая фильтрует список строк и возвращает список, содержащий только имена ваших друзей.
+
+// Если в имени ровно 4 буквы, то это точно ваш друг! В противном случае, будьте уверены, это не...
+
+// Input = ['Ryan', 'Kieran', 'Jason', 'Yous'];
+// Output = ['Ryan', 'Yous'];
+
+// Input = ['Peter', 'Stephen', 'Joe'];
+// Output = [];
+// Входные строки будут содержать только буквы.
+// Примечание: сохраните исходный порядок имен в выходных данных.
+// function friend(friends) {
+//   return friends.filter(el => el.length === 4);
+// }
+// console.log(friend(['Ryan', 'Kieran', 'Jason', 'Yous']));
+
+// Возьмите 2 строки s1и , s2включающие только буквы от aдо z. Верните новую отсортированную строку (в алфавитном порядке возрастания),
+//  максимально длинную, содержащую различные буквы - каждая взята только один раз - из s1 или s2.
+
+// Примеры:
+// a = "xyaabbbccccdefww"
+// b = "xxxxyyyyabklmopq"
+// longest(a, b) -> "abcdefklmopqwxy"
+
+// a = "abcdefghijklmnopqrstuvwxyz"
+// longest(a, a) -> "abcdefghijklmnopqrstuvwxyz"
+// function longest(s1, s2) {
+//   return [...new Set(s1 + s2)].sort().join('');
+// }
+// !.......................................................................
+// Дано множество чисел, вернуть аддитивное обратное для каждого. Каждое положительное становится отрицательным,
+//  а отрицательное становится положительным.
+
+// c --> [-1, -2, -3, -4, -5]
+// [1, -2, 3, -4, 5] --> [-1, 2, -3, 4, -5]
+// [] --> []
+// Можно предположить, что все значения являются целыми числами. Не изменяйте входной массив.
+// function invert(array) {
+//   return array.map(el => el * -1);
+// }
+// console.log(invert([]));
+// !......................................................................
+// // Реализуйте функцию, которая складывает два числа и возвращает их сумму в двоичном виде. Преобразование может быть выполнено до или после сложения.
+
+// // Возвращаемое двоичное число должно быть строкой.
+
+// // Примеры: (Вход1, Вход2 --> Выход (объяснение)))
+
+// // 1, 1 --> "10" (1 + 1 = 2 in decimal or 10 in binary)
+// // 5, 9 --> "1110" (5 + 9 = 14 in decimal or 1110 in binary)
+// function addBinary(a, b) { }
+// !.........................................................................
+// Припустимо, є два масиви об'єктів:
+// Необхідно створити новий масив об'єктів, що буде містити всі об'єкти з обох масивів, але без дублів.
+// Тобто об'єкти з однаковим значенням ключа "id" повинні бути об'єднані в один об'єкт.
+
+// const arr1 = [
+//   { id: 1, name: 'John' },
+//   { id: 2, name: 'Mary' },
+//   { id: 3, name: 'Bob' },
+// ];
+
+// const arr2 = [
+//   { id: 2, name: 'Mary1' },
+//   { id: 4, name: 'Jane' },
+//   { id: 5, name: 'Tom' },
+// ];
+// const newArr = arr1.concat(arr2);
+// const newObj = {};
+
+// for (const item of newArr) {
+//   newObj[item.id] = item;
+// }
+// // console.log(newObj);
+// const values = Object.values(newObj);
+// console.log(values);
+// !..............................................................................
+// Создайте функцию, которая возвращает сумму двух наименьших положительных чисел, заданных массивом из минимум 4 положительных целых чисел.
+//  Не будут переданы числа с плавающей точкой или неположительные целые числа.
+
+// Например, если массив передается как [19, 5, 42, 2, 77], то вывод должен быть 7.
+
+// [10, 343445353, 3453445, 3453545353453]должен вернуться 3453455.
+// function sumTwoSmallestNumbers(numbers) {
+//   const newArr = numbers.toSorted((a, b) => a - b);
+//   return newArr[0] + newArr[1];
+// }
+// console.log(sumTwoSmallestNumbers([19, 5, 42, 2, 77]));
+// console.log(sumTwoSmallestNumbers([10, 343445353, 3453445, 3453545353453]));
+// !................................................................................
+// На фабрике принтер печатает этикетки для коробок. Для одного вида коробок принтеру приходится использовать цвета, которые для простоты названы буквами от a to m.
+// Цвета, используемые принтером, записываются в контрольную строку. Например, «хорошая» контрольная строка будет aaabbbbhaijjjmозначать,
+//что принтер использовал три раза цвет a, четыре раза цвет b, один раз цвет h, затем один раз цвет a...
+// Иногда возникают проблемы: отсутствие цветов, техническая неисправность и выдается «плохая» контрольная строка, например,
+// aaaxbbbbyyhwawiwjjjwwmс буквами не из a to m.
+// Вам нужно написать функцию printer_error, которая, учитывая строку, вернет частоту ошибок принтера в виде строки ,
+// представляющей рациональное число, числитель которого — количество ошибок, а знаменатель — длина контрольной строки. Не сводите эту дробь к более простому выражению.
+// Строка имеет длину больше или равную единице и содержит только буквы от aдо z.
+
+// Примеры:
+// s="aaabbbbhaijjjm"
+// printer_error(s) => "0/14"
+
+// s="aaaxbbbbyyhwawiwjjjwwm"
+// printer_error(s) => "8/22"
+
+// function printerError(s) {
+//   const errors = [...s].filter(letter => letter > 'm').length;
+//   return `${errors}/${s.length}`;
+// }
+// console.log(printerError('aaabbbbavafvrmuki.putyjhsefhaijjsacasdcasdjm'));
+// const json = '{"name":"Mango","age":3,"isGoodBoy":true}';
+// console.log(json);
+
+// const dog = JSON.stringify(true);
+
+// const cat = JSON.parse(dog);
+// // console.log(dog); // {name: "Mango", age: 3, isGoodBoy: true}
+// // console.log(dog.name); // "Mango"
+// // console.log(dog.age); // "Mango"
+// // console.log(dog.isGoodBoy); // "Mango"
+
+// console.log(cat);
+
+// let sortme = function (names) {
+//   return names.sort((a, b) => a.localeCompare(b));
+// };
+// console.log(sortme(['one', 'two', 'three']));
+// !.......................................................................
+// You are going to be given a non-empty string. Your job is to return the middle character(s) of the string.
+
+// If the string's length is odd, return the middle character.
+// If the string's length is even, return the middle 2 characters.
+// function opposite(number) {
+//   return number * -1;
+// }
+// console.log(opposite(4.25));
+// !.........................................................................
+// Ваша задача — создать две функции ( maxand min, или maximumand minimum, и т. д., в зависимости от языка ), которые получают список целых чисел в качестве входных данных и возвращают наибольшее и наименьшее число в этом списке соответственно. Каждая функция возвращает одно число.
+
+// Примеры (Вход -> Выход)
+// * [4,6,2,1,9,63,-134,566]         -> max = 566, min = -134
+// * [-52, 56, 30, 29, -54, 0, -110] -> min = -110, max = 56
+// * [42, 54, 65, 87, 0]             -> min = 0, max = 87
+// * [5]                             -> min = 5, max = 5
+// var min = function (list) {
+//   const max = list.find(el => Math.max(el));
+//   const min = list.find(el => Math.min(el));
+//   return `-> max = ${max}, min = ${min}`;
+// };
+// console.log(min([4, 6, 2, 1, 9, 63, -134, 566]));
+// !.............................................................................
+// [1, 2, 3, 4] => 1 * 2 * 3 * 4 = 24
+// function grow(numbers) {
+//   return numbers.reduce((acc, el) => acc * el, 0);
+// }
+// console.log(grow([1, 2, 3, 4]));
+// !................................................................................
+// filter_list([1, 2, 'a', 'b']) == [1, 2];
+// filter_list([1, 'a', 'b', 0, 15]) == [1, 0, 15];
+// filter_list([1, 2, 'aasf', '1', '123', 123]) == [1, 2, 123];
+// function filter_list(list) {
+//   let newArr = [];
+//   for (const item of list) {
+//     if (typeof item === 'number' && item >= 0) {
+//       newArr.push(item);
+//     }
+//   }
+//   return newArr;
+// }
+// console.log(filter_list([1, 2, 'a', 'b']));
+// console.log(filter_list([1, 'a', 'b', 0, 15]));
+// console.log(filter_list([1, 2, 'aasf', '1', '123', 123]));
+// !...............................................................................
+// Напишите программу, которая находит сумму каждого числа от 1 до num. Число всегда будет положительным целым числом больше 0. Вашей функции нужно только вернуть результат, то, что показано в скобках в примере ниже, — это то, как вы достигаете этого результата, и это не его часть, см. примеры тестов.
+
+// Например (Вход -> Выход) :
+// var summation = function (num) {
+//   let result = 0;
+//   for (var i = 1; i <= num; i++) {
+//     result += i;
+//   }
+//   return result;
+// };
+// // *..........................................
+// function sumNumbers(num) {
+//   return (num * (num `+ 1)) / 2;
+// }
+// console.log(summation(10));
+// console.log(sumNumbers(10));
+// !...............................................................................
+// Your task is to create a function that does four basic mathematical operations.
+
+// The function should take three arguments - operation(string/char), value1(number), value2(number).
+// The function should return result of numbers after applying the chosen operation.
+
+// Examples(Operator, value1, value2) --> output
+// ('+', 4, 7) --> 11
+// ('-', 15, 18) --> -3
+// ('*', 5, 5) --> 25
+// ('/', 49, 7) --> 7
+// function basicOp(operation, value1, value2) {
+//   if (operation === '+') {
+//     return value1 + value2;
+//   } else if (operation === '-') {
+//     return value1 - value2;
+//   } else if (operation === '*') {
+//     return value1 * value2;
+//   } else {
+//     return value1 / value2;
+//   }
+// }
+// console.log(basicOp('+', 4, 7));
+// console.log(basicOp('-', 15, 18));
+// console.log(basicOp('*', 5, 5));
+// console.log(basicOp('/', 49, 7));
+// !..................................................................................
+// Вы были в походе с друзьями далеко от дома, но когда пришло время возвращаться, вы поняли, что топливо заканчивается,
+//   а ближайшая заправка находится 50в нескольких милях! Вы знаете, что в среднем ваша машина проезжает около 25миль на галлон.Остались 2галлоны.
+// Учитывая эти факторы, напишите функцию, которая сообщит вам, возможно ли добраться до насоса или нет.
+// Функция должна возвращать значение, trueесли это возможно, и falseнаоборот.
+// const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+//   return distanceToPump / mpg <= fuelLeft;
+// };
+// console.log(zeroFuel(50, 25, 2));
+// console.log(zeroFuel(100, 50, 1));
+// !....................................................................................
+// Реализуйте функцию, которая преобразует заданное логическое значение в его строковое представление.
+
+// Примечание: будут предоставлены только действительные данные.
+const booleanToString = b => String(b);
+console.log(true);

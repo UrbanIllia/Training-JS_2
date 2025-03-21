@@ -1090,5 +1090,339 @@
 // Реализуйте функцию, которая преобразует заданное логическое значение в его строковое представление.
 
 // Примечание: будут предоставлены только действительные данные.
-const booleanToString = b => String(b);
-console.log(true);
+// const booleanToString = b => String(b);
+// console.log(true);
+
+// const isSuccess = true;
+
+// // Create promise
+// const promise = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     if (isSuccess) {
+//       resolve('Success! Value passed to resolve function');
+//     } else {
+//       reject('Error! Error passed to reject function');
+//     }
+//   }, 2000);
+// });
+
+// // Registering promise callbacks
+// promise.then(
+//   value => {
+//     console.log(value); // "Success! Value passed to resolve function"
+//   },
+//   error => {
+//     console.log(error); // "Error! Error passed to reject function"
+//   }
+// );
+// const promise = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     resolve(5);
+//   }, 2000);
+// });
+
+// promise
+//   .then(value => {
+//     console.log(value); // 5
+//     return value * 2;
+//   })
+//   .then(value => {
+//     console.log(value); // 10
+//     return value * 3;
+//   })
+//   .then(value => {
+//     console.log(value); // 30
+//   })
+//   .catch(error => {
+//     console.log(error);
+//   })
+//   .finally(() => {
+//     console.log('finally');
+//   });
+
+// const options = {
+//   method: 'GET',
+// };
+
+// fetch('https://jsonplaceholder.typicode.com/users', options)
+//   .then(response => {
+//     if (!response.ok) {
+//       throw new Error(response.status);
+//     }
+//     return response.json();
+//   })
+//   .then(data => {})
+//   .catch(error => {
+//     // Error handling
+//   });
+// const fetchUsersBtn = document.querySelector('.btn');
+// const userList = document.querySelector('.user-list');
+
+// fetchUsersBtn.addEventListener('click', () => {
+//   fetchUsers()
+//     .then(users => renderUsers(users))
+//     .catch(error => console.log(error));
+// });
+
+// function fetchUsers() {
+//   return fetch('https://jsonplaceholder.typicode.com/users?_limit=7&_sort=name').then(response => {
+//     if (!response.ok) {
+//       throw new Error(response.status);
+//     }
+//     return response.json();
+//   });
+// }
+
+// function renderUsers(users) {
+//   const markup = users
+//     .map(user => {
+//       return `
+//           <li>
+//             <p><b>Name</b>: ${user.name}</p>
+//             <p><b>Email</b>: ${user.email}</p>
+//             <p><b>Company</b>: ${user.company.name}</p>
+//           </li>
+//       `;
+//     })
+//     .join('');
+//   userList.insertAdjacentHTML('beforeend', markup);
+// }
+// !........................................................................................................
+// Ваша задача — просуммировать разности между последовательными парами в массиве в порядке убывания.
+
+// Пример
+// [2, 1, 10]  -->  9
+// В порядке убывания:[10, 2, 1]
+
+// Сумма:(10 - 2) + (2 - 1) = 8 + 1 = 9
+
+// Если массив пуст или в массиве только один элемент, результатом должен быть 0( Nothingв Haskell, Noneв Rust).
+// function sumOfDifferences(arr) {
+//   if (arr.length <= 1) {
+//     return 0;
+//   }
+//   // Sort array in descending order
+//   const sorted = arr.sort((a, b) => b - a);
+//   // Calculate sum of differences
+//   let sum = 0;
+//   for (let i = 0; i < sorted.length - 1; i++) {
+//     sum += sorted[i] - sorted[i + 1];
+//   }
+//   return sum;
+// }
+// console.log(sumOfDifferences([10, 2, 1, 3]));
+// console.log(sumOfDifferences([1, 2, 10]));
+// x = 1, n = 10 --> [1,2,3,4,5,6,7,8,9,10]
+// x = 2, n = 5  --> [2,4,6,8,10]
+// function countBy(x, n) {
+//   let z = [];
+//   for (let i = 1; i <= n; i++) {
+//     z.push(x * i);
+//   }
+//   return z;
+// }
+// console.log(countBy(2, 5));
+// ................................................................................
+// Таракан — одно из самых быстрых насекомых.Напишите функцию, которая берет его скорость в км в час и возвращает
+//  ее в см в секунду, округленную до целого числа(= floored). 100000 3600
+// function cockroachSpeed(s) {
+//   const cms = (s * 100000) / 3600; // Переводим км/ч в см/с
+//   return Math.floor(cms);
+// }
+// function convertSpeed(kmh) {
+//   const cms = (kmh * 100000) / 3600; // Переводим км/ч в см/с
+//   return Math.floor(cms); // Округляем вниз до целого числа
+// }
+// ...............................................................
+// Вам будет предоставлен массив aи значение x. Все, что вам нужно сделать, это проверить, содержит ли предоставленный массив значение.
+
+// aможет содержать числа или строки. xможет быть и тем, и другим.
+
+// Верните true, если массив содержит значение, falseесли нет.
+// function check(a, x) {
+//   return a.includes(x);
+// }
+// console.log(check([101, 45, 75, 105, 99, 107], 107));
+// ..................................................................
+// В этом ката речь идет об умножении заданного числа на восемь,
+//     если это четное число, и на девять в противном случае.
+// function simpleMultiplication(number) {
+//   if (number % 2 === 0) {
+//     return number * 8;
+//   } else {
+//     return number * 9;
+//   }
+// }
+
+// console.log(simpleMultiplication(2));
+// ......................................................................
+//Напиши функцію findSmallerNumber(numbers)
+//яка шукає найменше число в масиві.
+//Додай перевірку що функція отримує масив
+
+// const findSmallerNumber = arr => {
+//   if (!Array.isArray(arr)) {
+//     console.log(`${arr} is not array`);
+//   }
+//   let smallestNumber = arr[0];
+//   for (let i = 1; i < arr.length; i++) {
+//     if (smallestNumber > arr[i]) {
+//       smallestNumber = arr[i];
+//     }
+//   }
+//   return smallestNumber;
+// };
+
+// console.log(findSmallerNumber([12, 47, 22, 14, 39]));
+
+// const findSmallerNumber = numbers => {
+//   if (!Array.isArray(numbers)) {
+//     return `${numbers} is not array`;
+//   }
+//   let smallestNumber = numbers[0];
+//   for (const number of numbers) {
+//     if (typeof number !== 'number') {
+//       continue;
+//     }
+//     if (smallestNumber > number) {
+//       smallestNumber = number;
+//     }
+//   }
+//   return smallestNumber;
+// };
+// console.log(findSmallerNumber(['d', 47, 22, 14, 39]));
+// console.log(findSmallerNumber('hello'));
+// ...................................................................
+// *Потрібно перевітири чи є речення палінром*/
+
+// const str = 'Я несу гусеня';
+
+// const str = 'Де помити мопед';
+// const str = 'І була пані на палубІ';
+// const str = 'Поліна неси Ром!'
+// const isPalindrom = function (str) {
+//   const strArr = str.replaceAll(' ', '').toLowerCase().split('').reverse().join('');
+//   const strArr2 = str.toLowerCase().replaceAll(' ', '');
+//   return strArr === strArr2;
+// };
+// console.log(isPalindrom('Де помити мопед'));
+// const isPalindrom = function (str) {
+//   const updateString = str.replaceAll(' ', '').toLowerCase();
+//   const array = [];
+//   for (let i = 0; i < updateString.length; i++) {
+//     array.push(updateString[updateString.length - 1 - i]);
+//   }
+//   return array.join('') === updateString;
+// };
+// console.log(isPalindrom('Де помити мопед'));
+// ...................................................................
+// const compareNumbers = (a, b) => {
+//   if (typeof a === 'number' && typeof b === 'number') {
+//     return Math.min(a, b);
+//   }
+//   return console.log('One of the parametrs is not a number');
+// };
+// console.log(compareNumbers(15, 44));
+// console.log(compareNumbers(15, 44));
+// ................................................................
+//напиши функцію функцію яка перевірить чи однакові масиви
+//елементи з першого масива це елементи другого масива в квадраті
+// const numbers = [11, 9, 3, 121, 33, 24, 20];
+// const numbers2 = [121, 81, 9, 14641, 1089, 576, 576];
+
+// // const checkArrays = (numbers, numbers2) => {
+// //   const numbers3 = [];
+// //   for (let i = 0; i < numbers.length; i++) {
+// //     numbers3.push(numbers[i] * numbers[i]);
+// //   }
+// //   for (let i = 0; i < numbers3.length; i++) {
+// //     if (numbers3[i] !== numbers2[i]) {
+// //       return false;
+// //     }
+// //   }
+// //   return true;
+// // };
+// // checkArrays(numbers, numbers2);
+// function check(numbers, numbers2) {
+//   //   const powNumbers = [];
+//   if (numbers.length !== numbers2.length) {
+//     return false;
+//   }
+//   for (let i = 0; i < numbers.length; i++) {
+//     if (numbers[i] !== Math.sqrt(numbers2[i])) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+// console.log(check(numbers, numbers2));
+// .......................................................................
+// const someArr = [22, 11, 34, 5, 12];
+
+// function sumNeighbors(someArr) {
+//   let sum = [];
+//   for (let i = 0; i < someArr.length; i = i + 2) {
+//     sum.push(someArr[i] + (someArr[i + 1] || 0));
+//   }
+//   return sum;
+// }
+// console.log(sumNeighbors(someArr));
+// ........................................................................
+// Створіть масив styles з елементами «Джаз» та «Блюз».
+// Додайте "Рок-н-рол" в кінець.
+// Замініть значення "Блюз" на "Класика".
+// Видалить перший елемент масиву і виведіть його в консоль.
+// Вставте «Реп» і «Реггі» на початок масиву.
+
+// const styles = ['Джаз', 'Блюз'];
+// // console.log(styles.push('Рок-н-рол'));
+// styles.push('Рок-н-рол');
+// // console.log(styles);
+// const index = styles.indexOf('Блюз');
+// console.log(index);
+// styles[index] = 'Класика';
+// console.log(styles);
+// styles.unshift('Реп', 'Реггі');
+// console.log(styles);
+// ..................................................................
+/*
+Створити функцію multiples(m, n), яка повертає масив перших m кратних дійсного числа n. Вважати, що m - натуральне число.
+
+Наприклад.
+multiples(3, 5) повинна повернути [5, 10, 15]
+*/
+
+// function multiples(m, n) {
+//   let arr = [];
+//   let startNum = n;
+
+//   for (let i = 0; i < m; i++) {
+//     arr.push(startNum);
+//     startNum += n;
+//   }
+//   return arr;
+// }
+// console.log(multiples(3, 5));
+// console.log(multiples(5, 29));
+// option 2
+// function multiples(m, n) {
+//   const arr = [];
+//   for (let i = 1; i <= m; i += 1) {
+//     arr.push(n * i);
+//   }
+//   return arr;
+// }
+// console.log(multiples(3, 5));
+// console.log(multiples(5, 29));
+//Перетворити рядок, що містить слова, розділені комами, в масив слів і вивести кожне слово в окремому рядку за допомогою циклу for і for..of.
+
+// const string = 'HTML, JavaScript, CSS, React';
+// const array = string.split(' ');
+// console.log(array);
+// const fuck = string => {
+//   let array = string.split(',');
+//   for (let i = 0; i < array.length; i++) {
+//     console.log(string[i]);
+//   }
+// };
+// console.log(fuck('HTML, JavaScript, CSS, React'));

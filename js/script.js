@@ -1544,3 +1544,45 @@ multiples(3, 5) повинна повернути [5, 10, 15]
 //   title: "Моє меню"
 // };
 // ..........................................................................
+// Напишіть функцію updateObject, яка приймає об'єкт та повертає
+// новий об'єкт без зазначених параметрів
+// Очікуваний результат ({a: 1, b: 2, c: 3}, 'b', 'a') => {c: 3}
+// const updateObject = (obj, ...keysForDelete) => {
+//   const newObj = {};
+//   //   const keys = Object.keys(obj);
+//   for (const key in obj) {
+//     if (!keysForDelete.includes(key)) {
+//       newObj[key] = obj[key];
+//     }
+//   }
+//   return newObj;
+// };
+
+// console.log(updateObject({ a: 1, b: 2, c: 3 }, 'b', 'a'));
+// function updateObject(obj, ...keysForDelete) {
+//   const newObj = {};
+//   const keys = Object.keys(obj);
+//   for (const key of [...keys]) {
+//     if (keysForDelete.includes(key)) {
+//       const index = keys.indexOf(key);
+//       keys.splice(index, 1);
+//     }
+//   }
+//   for (const key of keys) {
+//     newObj[key] = obj[key];
+//   }
+//   return newObj;
+// }
+// console.log(updateObject({ a: 1, b: 2, c: 3 }, 'b', 'a'));
+// ...........................................................................
+// Напишіть функцію "findTopStudent", яка буде повертати об'єкт студента з найвищим середнім балом.
+
+// const students = [
+//   { name: "Андрій", surname: "Іванов", grade: 4.5 },
+//   { name: "Олександр", surname: "Петров", grade: 3.9 },
+//   { name: "Марія", surname: "Сидорова", grade: 4.8 },
+//   { name: "Ірина", surname: "Федорова", grade: 4.2 },
+// ];
+const findTopStudent = obj => {
+  let bestStudent = {};
+};

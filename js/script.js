@@ -1578,11 +1578,120 @@ multiples(3, 5) повинна повернути [5, 10, 15]
 // Напишіть функцію "findTopStudent", яка буде повертати об'єкт студента з найвищим середнім балом.
 
 // const students = [
-//   { name: "Андрій", surname: "Іванов", grade: 4.5 },
-//   { name: "Олександр", surname: "Петров", grade: 3.9 },
-//   { name: "Марія", surname: "Сидорова", grade: 4.8 },
-//   { name: "Ірина", surname: "Федорова", grade: 4.2 },
+//   { name: 'Андрій', surname: 'Іванов', grade: 4.5 },
+//   { name: 'Олександр', surname: 'Петров', grade: 3.9 },
+//   { name: 'Марія', surname: 'Сидорова', grade: 4.8 },
+//   { name: 'Ірина', surname: 'Федорова', grade: 4.2 },
 // ];
-const findTopStudent = obj => {
-  let bestStudent = { 'Привет Маталька. Как дела': 123 };
-};
+// ....................
+// const findTopStudent = students => {
+//   let bestStudent = students[0];
+//   for (const student of students) {
+//     if (student.grade > bestStudent.grade) {
+//       bestStudent = student;
+//     }
+//   }
+//   return bestStudent;
+// };
+// ...................
+// const findTopStudent = students => {
+//   let grades = [];
+//   for (const student of students) {
+//     grades.push(student.grade);
+//   }
+//   let bestStuden = Math.max(...grades);
+//   for (const student of students) {
+//     if (student.grade === bestStuden) {
+//       return student;
+//     }
+//   }
+// };
+// console.log(findTopStudent(students));
+const people = [
+  {
+    name: 'Alex',
+    know: ['Alex', 'Jhon'],
+  },
+  {
+    name: 'Eva',
+    know: ['Alex', 'Jhon'],
+  },
+  {
+    name: 'Ivan',
+    know: ['Jhon', 'Eva'],
+  },
+  {
+    name: 'Jhon',
+    know: [],
+  },
+];
+//нарцис  'Jhon'
+
+const people2 = [
+  {
+    name: 'Alex',
+    know: ['Alex', 'Jhon'],
+  },
+  {
+    name: 'Jhon',
+    know: [],
+  },
+  {
+    name: 'Eva',
+    know: [],
+  },
+  {
+    name: 'Ivan',
+    know: ['Jhon', 'Eva'],
+  },
+];
+//немає нарциса'
+const people3 = [
+  {
+    name: 'Alex',
+    know: ['Alex', 'Eva'],
+  },
+  {
+    name: 'Jhon',
+    know: [],
+  },
+  {
+    name: 'Eva',
+    know: ['Alex', 'Jhon'],
+  },
+  {
+    name: 'Ivan',
+    know: ['Jhon', 'Eva'],
+  },
+];
+//немає нарциса
+
+const people4 = [
+  {
+    name: 'Alex',
+    know: ['Alex', 'Jhon'],
+  },
+  {
+    name: 'Jhon',
+    know: ['Eva'],
+  },
+  {
+    name: 'Eva',
+    know: ['Alex', 'Jhon'],
+  },
+  {
+    name: 'Ivan',
+    know: ['Jhon', 'Eva'],
+  },
+];
+//немає нарциса'
+//Нарциса знають всі, нарцис незнає нікого
+
+function findNar(array) {
+  let narcis = '';
+  for (const person of array) {
+    if (person.know.length === 0) {
+    }
+  }
+}
+console.log(findNar(people));

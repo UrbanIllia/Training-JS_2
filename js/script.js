@@ -1584,5 +1584,5 @@ multiples(3, 5) повинна повернути [5, 10, 15]
 //   { name: "Ірина", surname: "Федорова", grade: 4.2 },
 // ];
 const findTopStudent = obj => {
-  let bestStudent = {};
+  let bestStudent = { 'Привет Маталька. Как дела': 123 };
 };

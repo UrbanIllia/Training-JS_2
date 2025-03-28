@@ -1426,3 +1426,121 @@ multiples(3, 5) повинна повернути [5, 10, 15]
 //   }
 // };
 // console.log(fuck('HTML, JavaScript, CSS, React'));
+// ..........................................................
+// Припустимо, є два масиви об'єктів:
+// Необхідно створити новий масив об'єктів, що буде містити всі об'єкти з обох масивів, але без дублів.
+// Тобто об'єкти з однаковим значенням ключа "id" повинні бути об'єднані в один об'єкт.
+
+// const arr1 = [
+//   { id: 1, name: 'John' },
+//   { id: 2, name: 'Mary' },
+//   { id: 3, name: 'Bob' },
+// ];
+
+// const arr2 = [
+//   { id: 2, name: 'Mary1' },
+//   { id: 4, name: 'Jane' },
+//   { id: 5, name: 'Tom' },
+// ];
+// const arr3 = arr1.concat(arr2);
+// // console.log(arr3);
+// let newObject = {};
+// for (const item of arr3) {
+//   //   console.log(item.id);
+//   newObject[item.id] = item;
+// }
+// console.log(newObject);
+// const values = Object.values(newObject);
+// console.log(values);
+// !................................................................
+// console.log(newObject);
+// let userInfo = {
+//   name: 'Вася',
+//   age: 30,
+//   58: 'Значение свойства',
+// };
+// console.log(userInfo[58]);
+// let userInfo = {
+//   name: 'Вася',
+//   age: 30,
+// };
+// let user = userInfo;
+// user.age = 45;
+
+// console.log(userInfo.age);
+// let userInfo = {
+//   name: 'Вася',
+//   age: 30,
+//   address: {
+//     city: 'Uzhhorod',
+//   },
+// };
+// for (const key in userInfo.address) {
+//   console.log(userInfo.address[key]);
+// }
+// const userInfo = {
+//   name: 'Вася',
+//   age: 30,
+//   'likes js': true,
+// };
+// console.log(userInfo['likes js']);
+
+// 1.Создайте пустой объект userInfo.
+// 2.Добавьте свойство name со значением Вася.
+// 3.Добавьте свойство age со значением 30.
+// 4.Измените значение свойства name на Лена.
+// 5.Удалите свойство name из объекта.
+// const userInfo = {};
+// userInfo.name = 'Вася';
+// console.log(userInfo);
+// userInfo.age = 30;
+// console.log(userInfo);
+// userInfo.name = 'Лена';
+// console.log(userInfo);
+// delete userInfo.name;
+// console.log(userInfo);
+// .........................................................
+// Напишіть код для підсумовування всіх зарплат і збережіть у змінній sum.
+// У наведеному вище прикладі має бути 390.
+// Якщо об’єкт salaries порожній, то результат має бути 0.
+// let salaries = {
+//   John: 100,
+//   Ann: 160,
+//   Pete: 130,
+// };
+// let sum = 0;
+// for (const key in salaries) {
+//   sum = sum + salaries[key];
+// }
+// console.log(sum);
+// ............................................................
+// Помножте числові значення властивостей на 2
+// Створіть функцію multiplyNumeric(obj), яка примножує всі числові властивості
+// об’єкта obj на 2.
+// Зверніть увагу, що multiplyNumeric не потрібно нічого повертати.
+// Слід безпосередньо змінювати об’єкт.
+// P.S. Використовуйте typeof для перевірки, що значення властивості числове.
+
+// let menu = {
+//   width: 200,
+//   height: 300,
+//   title: 'Моє меню',
+// };
+
+// multiplyNumeric = menu => {
+//   for (let men in menu) {
+//     if (typeof menu[men] === 'number') {
+//       menu[men] *= 2;
+//     }
+//   }
+//   //   console.log(menu);
+// };
+// multiplyNumeric(menu);
+// console.log(menu);
+// після виклику функції
+// menu = {
+//   width: 400,
+//   height: 600,
+//   title: "Моє меню"
+// };
+// ..........................................................................
